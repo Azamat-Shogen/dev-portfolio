@@ -12,7 +12,7 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/project-8.gif?height=200&width=300",
     github: "https://github.com/janedoe/ecommerce-platform",
     demo: "https://ecommerce-platform-demo.com",
   },

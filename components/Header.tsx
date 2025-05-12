@@ -11,7 +11,7 @@ const Header = () => {
     <header className="fixed w-full z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-          <h1 className="text-2xl font-bold text-purple-500">Jane Doe</h1>
+          <h1 className="text-2xl font-bold text-purple-500">Azamat Shogen</h1>
         </motion.div>
         <nav className="hidden md:flex space-x-6">
           {["About", "Skills", "Projects", "Contact"].map((item) => (
