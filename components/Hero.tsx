@@ -13,7 +13,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-7xl font-bold mb-4"
         >
-          Jane Doe
+          Azamat Shgoen
         </motion.h1>
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -21,7 +21,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-2xl md:text-3xl text-gray-400 mb-8"
         >
-          Full Stack Developer
+          Software Developer
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
