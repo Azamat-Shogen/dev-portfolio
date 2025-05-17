@@ -8,8 +8,8 @@ import "swiper/css/pagination"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Jane Doe - Full Stack Developer",
-  description: "Portfolio of Jane Doe, a Full Stack Developer specializing in modern web technologies.",
+  title: "Azamat Shogen - Software Developer",
+  description: "Portfolio of Azamat Shogen, a Software Developer specializing in modern web technologies.",
     generator: 'v0.dev'
 }
 
