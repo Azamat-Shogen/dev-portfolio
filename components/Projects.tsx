@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink } from "lucide-react"
+import { LuGithub } from "react-icons/lu";
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination } from "swiper/modules"
 import "swiper/css"
@@ -12,7 +13,7 @@ const projects = [
   {
     title: "Admin Dashboard",
     description: "Full-stack platform built with Next.js, ShadCN UI, Server Actions, and Prisma. Features user and admin tools for managing registrations, equipment, and orders.",
-    image: "/project-8.gif?height=200&width=300",
+    image: "/images/project-8.gif?height=200&width=300",
     github: "#",
     demo: "https://www.ipro-permits.com/",
     private: true,
@@ -21,7 +22,7 @@ const projects = [
   {
     title: "Spring Social Media Blog API",
     description: "API-only social media backend built with Java, Spring Boot, Spring Data, and the Spring Framework. Handles user accounts and message management.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/placeholder.svg?height=200&width=300",
     github: "https://github.com/Azamat-Shogen/Azamat-Shogen-pep-spring-project",
     demo: "#",
     private: false,
@@ -30,7 +31,7 @@ const projects = [
   {
     title: "E-commerce Test Automation Framework",
     description: "Automated testing framework for a WooCommerce site using Python, Pytest, and Selenium. Features CI/CD with GitLab, real-time result tracking via a Flask API and Next.js frontend, and Dockerized deployment. Tech: Python, Selenium, Pytest, Flask, Next.js, MySQL, Docker, GitLab CI/CD.",
-    image: "/project-9.gif?height=200&width=300",
+    image: "/images/project-9.gif?height=200&width=300",
     github: "https://gitlab.com/python-testing5061140/ecom-store-automation",
     demo: "https://store-tests-reports.netlify.app/",
     private: false,
@@ -39,7 +40,7 @@ const projects = [
   {
     title: "Javalin Social Media Blog API",
     description: "API-only social media backend built with Java, Javalin, and JDBC. Supports user management, authentication, and full CRUD operations for messages.",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/placeholder.svg?height=200&width=300",
     github: "https://github.com/Azamat-Shogen/Azamat-Shogen-pep-project",
     demo: "#",
     private: false,
@@ -48,7 +49,7 @@ const projects = [
   {
     title: "React Card Game",
     description: "Card game originally built in Python, rebuilt with React, JavaScript, and Redux for improved interactivity and state management.",
-    image: "/project-3.gif?height=200&width=300",
+    image: "/images/project-3.gif?height=200&width=300",
     github: "https://github.com/Azamat-Shogen/c_game",
     demo: "https://c-game-az.netlify.app/",
     private: false,
@@ -57,7 +58,7 @@ const projects = [
   {
     title: "UFC Rankins Clone",
     description: "UFC rankings app with React and React-Bootstrap frontend, backed by a Python Django API using PostgreSQL. Deployed with Docker on AWS.",
-    image: "/project-2.gif?height=200&width=300",
+    image: "/images/project-2.gif?height=200&width=300",
     github: "https://github.com/Azamat-Shogen/ufc_rankings_client",
     demo: "https://ufc-rankings.netlify.app/rankings",
     private: false,
@@ -66,7 +67,7 @@ const projects = [
     {
     title: "Bean Machine Game",
     description: "Bean Machine game built with React, JavaScript, and Canvas for dynamic graphics and gameplay.",
-    image: "/project-6.gif?height=200&width=300",
+    image: "/images/project-6.gif?height=200&width=300",
     github: "https://github.com/Azamat-Shogen/bean-machine",
     demo: "https://bean-machine.netlify.app/",
     private: false,
@@ -127,8 +128,9 @@ const Projects = () => {
                           className="text-gray-600 cursor-not-allowed flex items-center"
                           title="Private repository"
                         >
-                           <img src="/github.svg" alt="GitHub" className="mr-1 w-5 h-5" /> GitHub
-                          {/* <Github className="mr-1" size={18} /> GitHub */}
+                           
+                           <LuGithub className="mr-1" size={18} />
+                            GitHub
                         </span>
                       ) : (
                         <a
@@ -137,7 +139,9 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="text-purple-500 hover:text-purple-600 transition duration-300 flex items-center"
                         >
-                           <img src="/github.svg" alt="GitHub" className="mr-1 w-5 h-5" /> GitHub
+                           {/* <LuGithub className="mr-1 w-5 h-5" /> */}
+                           <LuGithub className="mr-1" size={18} />
+                            GitHub
                         </a>
                       )}
 
@@ -145,7 +149,7 @@ const Projects = () => {
                       {project.demoDisabled ? (
                         <span
                           className="text-gray-600 cursor-not-allowed flex items-center"
-                          title="Demo disabled"
+                          title="Not available"
                         >
                           <ExternalLink className="mr-1" size={18} /> Live Demo
                         </span>
