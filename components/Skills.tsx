@@ -5,16 +5,26 @@ import { motion } from "framer-motion"
 const skills = [
   "JavaScript",
   "TypeScript",
+  "Python",
+  "Java",
   "React",
+  "Next.js",
+  "Javalin",
+  "Spring Boot",
   "Node.js",
   "Express",
   "MongoDB",
   "PostgreSQL",
-  "GraphQL",
+  "MySQL",
+  "Automation Testing",
+  "Selenium",
+  "Pytest",
   "Docker",
-  "AWS",
-  "Git",
   "CI/CD",
+  "Jenkins",
+  "GitHub",
+  "GitLab"
+
 ]
 
 const Skills = () => {

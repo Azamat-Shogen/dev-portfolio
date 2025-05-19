@@ -1,22 +1,38 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { motion } from "framer-motion"
+import emailjs from "@emailjs/browser";
+
 
 const Contact = () => {
+  // Access env variables
+  const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+  const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
+  const formRef = useRef<HTMLFormElement>(null);
+
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Here you would typically handle the form submission, e.g., send an email or save to a database
-    console.log("Form submitted:", { name, email, message })
-    // Reset form fields
-    setName("")
-    setEmail("")
-    setMessage("")
-  }
+    e.preventDefault();
+    if (!formRef.current) return;
+
+    emailjs.sendForm(serviceID, templateID, formRef.current, publicKey)
+      .then((result) => {
+        console.log("Email sent successfully! ", result.text);
+        alert("Email sent successfully!");
+        setName("");
+        setEmail("");
+        setMessage("");
+      }, (error) => {
+        console.log("Failed to send email: ", error);
+        alert("Failed to send email")
+      });
+  };
 
   return (
     <section id="contact" className="py-20 bg-gray-900">
@@ -30,6 +46,7 @@ const Contact = () => {
           Get in Touch
         </motion.h2>
         <motion.form
+          ref={formRef}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -43,6 +60,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
+              name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -56,6 +74,7 @@ const Contact = () => {
             <input
               type="email"
               id="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -68,6 +87,7 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
+              name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required

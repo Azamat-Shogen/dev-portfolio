@@ -23,7 +23,7 @@ const About = () => {
             className="w-full md:w-1/3"
           >
             <Image
-              src="/avatar-3.jpg?height=400&width=400"
+              src="/images/avatar-3.jpg?height=400&width=400"
               alt="Jane Doe"
               width={400}
               height={400}
@@ -43,6 +43,14 @@ const About = () => {
             <p className="text-xl text-gray-300">
             When I'm not coding, I’m either solving logic puzzles like nonograms or at the gym staying active. I'm a strong believer in continuous learning and keeping up with the ever-evolving world of software development.
             </p>
+            <a
+              href="/docs/AzamatResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 px-6 py-3 bg-gray-900 text-white rounded-xl shadow-md hover:bg-gray-700 transition"
+            >
+              View Resume
+            </a>
           </motion.div>
         </div>
       </div>
